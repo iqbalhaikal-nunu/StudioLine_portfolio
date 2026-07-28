@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Line — Illustrator Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- corner marks (signature element) -->
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
+
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <a href="#home" class="logo">Studio<span>Line</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-item">Menu</a>
+      <a href="#skills" class="nav-item">Skills</a>
+      <a href="#artwork" class="nav-item">Artwork</a>
+      <a href="#contact" class="nav-item">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="eyebrow">Freelance Illustrator</p>
+      <h1>Portfolio<br>Illustrator</h1>
+      <p class="hero-sub">Hand-built illustration and visual storytelling — from editorial spots to full character sets. Every line drawn on purpose.</p>
+      <a href="#artwork" class="btn-view">View Work</a>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image-frame">
+        <svg viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+          <rect width="400" height="480" fill="#111111"/>
+          <circle cx="200" cy="180" r="90" fill="#FFD400"/>
+          <path d="M60 480 C120 340 280 340 340 480 Z" fill="#FFFFFF"/>
+          <path d="M120 160 Q200 60 280 160 Q220 200 200 260 Q180 200 120 160Z" fill="#111111" opacity="0.85"/>
+          <circle cx="170" cy="165" r="8" fill="#111111"/>
+          <circle cx="230" cy="165" r="8" fill="#111111"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTWORK / PROJECTS -->
+  <section class="artwork" id="artwork">
+    <div class="section-head">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Artwork</h2>
+    </div>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="300" fill="#FFD400"/>
+            <path d="M40 260 C90 120 210 120 260 260Z" fill="#111"/>
+            <circle cx="150" cy="90" r="45" fill="#111"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <h3>Wildlife Series</h3>
+          <p>Ink &amp; digital color</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="300" fill="#111"/>
+            <rect x="60" y="60" width="180" height="180" fill="#FFD400" transform="rotate(45 150 150)"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <h3>Editorial Spots</h3>
+          <p>Magazine commissions</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="300" fill="#111"/>
+            <path d="M0 220 Q150 100 300 220 L300 300 L0 300Z" fill="#FFD400"/>
+            <circle cx="220" cy="90" r="30" fill="#FFD400"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <h3>Character Set</h3>
+          <p>Personal project</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="300" fill="#FFD400"/>
+            <path d="M0 0 L150 150 L0 300Z" fill="#111"/>
+            <path d="M300 0 L150 150 L300 300Z" fill="#111"/>
+          </svg>
+        </div>
+        <div class="project-info">
+          <h3>Poster Art</h3>
+          <p>Event branding</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS / ABOUT -->
+  <section class="skills" id="skills">
+    <div class="skills-about">
+      <p class="eyebrow">About Me</p>
+      <h2>Hi, I'm the artist behind Studio Line.</h2>
+      <p>I'm an illustrator focused on bold shapes, honest linework, and color that does the talking. Over the past six years I've worked with editorial clients, indie studios, and small brands who want art that feels handmade, not templated.</p>
+      <p>When I'm not on a client deadline, I'm filling sketchbooks with the wildlife and characters you'll find in my personal projects below.</p>
+    </div>
+    <div class="skills-list">
+      <p class="eyebrow">Skills</p>
+      <ul>
+        <li><span>Character Illustration</span><div class="bar"><i style="width:95%"></i></div></li>
+        <li><span>Editorial &amp; Spot Art</span><div class="bar"><i style="width:90%"></i></div></li>
+        <li><span>Digital Color &amp; Rendering</span><div class="bar"><i style="width:88%"></i></div></li>
+        <li><span>Procreate / Photoshop</span><div class="bar"><i style="width:92%"></i></div></li>
+        <li><span>Brand &amp; Poster Design</span><div class="bar"><i style="width:80%"></i></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-head">
+      <p class="eyebrow">Let's Talk</p>
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-wrap">
+      <form class="contact-form" id="contactForm">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@email.com" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+        </label>
+        <button type="submit" class="btn-view">Send Message</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+      <div class="contact-info">
+        <p><strong>Email</strong><br>hello@studioline.com</p>
+        <p><strong>Based in</strong><br>Working with clients worldwide</p>
+        <p><strong>Follow</strong><br>Instagram · Behance · Dribbble</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Studio Line. All artwork rights reserved.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
