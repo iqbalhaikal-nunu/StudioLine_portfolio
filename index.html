@@ -3,175 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Line — Illustrator Portfolio</title>
+<title>Farhanah — Illustrator Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Yellowtail&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- corner marks (signature element) -->
-  <div class="corner corner-tl"></div>
-  <div class="corner corner-tr"></div>
-  <div class="corner corner-bl"></div>
-  <div class="corner corner-br"></div>
+<!-- ===== Abstract corner background (appears behind every page) ===== -->
+<div class="abstract-frame" aria-hidden="true">
+  <svg class="corner corner-tl" viewBox="0 0 220 220" preserveAspectRatio="none"><polygon points="0,0 220,0 0,220" fill="#111111"/><polygon points="0,0 130,0 0,130" fill="#FFD400"/></svg>
+  <svg class="corner corner-tr" viewBox="0 0 220 220" preserveAspectRatio="none"><polygon points="220,0 220,220 0,0" fill="#111111"/><polygon points="220,0 220,120 100,0" fill="#FFD400"/></svg>
+  <svg class="corner corner-bl" viewBox="0 0 220 220" preserveAspectRatio="none"><polygon points="0,220 0,0 220,220" fill="#FFD400"/><polygon points="0,220 0,110 110,220" fill="#111111"/></svg>
+  <svg class="corner corner-br" viewBox="0 0 260 260" preserveAspectRatio="none">
+    <polygon points="260,260 260,60 60,260" fill="#FFD400"/>
+    <polygon points="260,260 260,140 140,260" fill="#111111"/>
+  </svg>
+</div>
 
-  <!-- NAVIGATION -->
-  <header class="nav">
-    <a href="#home" class="logo">Studio<span>Line</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" class="nav-item">Menu</a>
-      <a href="#skills" class="nav-item">Skills</a>
-      <a href="#artwork" class="nav-item">Artwork</a>
-      <a href="#contact" class="nav-item">Contact</a>
-    </nav>
-  </header>
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <!--
+    TO USE YOUR OWN LOGO: replace the file assets/logo.png with your own
+    image (keep the same filename "logo.png"), ideally a transparent PNG
+    around 400–600px wide. The nav will pick it up automatically.
+  -->
+  <a href="#home" class="logo" data-nav="home">
+    <img src="assets/logo.png" alt="Farhanah Illustrator logo" class="logo-img">
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav-links" id="navLinks">
+    <a href="#home"    class="nav-item" data-nav="home">Home</a>
+    <a href="#project"  class="nav-item" data-nav="project">Project</a>
+    <a href="#artwork" class="nav-item" data-nav="artwork">Artwork</a>
+    <a href="#skill"   class="nav-item" data-nav="skill">Skill</a>
+    <a href="#contact" class="nav-item" data-nav="contact">Contact</a>
+  </nav>
+</header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-text">
-      <p class="eyebrow">Freelance Illustrator</p>
-      <h1>Portfolio<br>Illustrator</h1>
-      <p class="hero-sub">Hand-built illustration and visual storytelling — from editorial spots to full character sets. Every line drawn on purpose.</p>
-      <a href="#artwork" class="btn-view">View Work</a>
-    </div>
-    <div class="hero-image">
-      <div class="hero-image-frame">
-        <svg viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
-          <rect width="400" height="480" fill="#111111"/>
-          <circle cx="200" cy="180" r="90" fill="#FFD400"/>
-          <path d="M60 480 C120 340 280 340 340 480 Z" fill="#FFFFFF"/>
-          <path d="M120 160 Q200 60 280 160 Q220 200 200 260 Q180 200 120 160Z" fill="#111111" opacity="0.85"/>
-          <circle cx="170" cy="165" r="8" fill="#111111"/>
-          <circle cx="230" cy="165" r="8" fill="#111111"/>
-        </svg>
+<main id="app">
+
+  <!-- ============================================================ -->
+  <!-- PAGE 1 — HOME                                                 -->
+  <!-- ============================================================ -->
+  <section class="page" id="page-home" data-page="home">
+    <div class="page-inner hero">
+      <div class="hero-text">
+        <p class="eyebrow">2026 Portfolio</p>
+        <h1>Portfolio<br>Illustrator</h1>
+        <p class="hero-name">FARHANAH</p>
+        <p class="hero-sub">Creative and detail-oriented illustrator with a passion for visual storytelling and digital art. Skilled in character design, illustration, branding visuals and promotional artwork.</p>
+        <a href="#project" class="btn-view" data-nav="project">View</a>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-frame">
+          <img src="assets/Farhanah_frontpage.jpg" alt="Digital illustration artwork by Farhanah">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ARTWORK / PROJECTS -->
-  <section class="artwork" id="artwork">
-    <div class="section-head">
-      <p class="eyebrow">Selected Work</p>
-      <h2>Artwork</h2>
-    </div>
-    <div class="project-grid">
+  <!-- ============================================================ -->
+  <!-- PAGE 2 — PROJECT (case studies, opened via the View button)  -->
+  <!-- ============================================================ -->
+  <section class="page" id="page-project" data-page="project">
+    <div class="page-inner">
+      <div class="project-layout">
 
-      <article class="project-card">
-        <div class="project-thumb">
-          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-            <rect width="300" height="300" fill="#FFD400"/>
-            <path d="M40 260 C90 120 210 120 260 260Z" fill="#111"/>
-            <circle cx="150" cy="90" r="45" fill="#111"/>
-          </svg>
-        </div>
-        <div class="project-info">
-          <h3>Wildlife Series</h3>
-          <p>Ink &amp; digital color</p>
-        </div>
-      </article>
+        <!--
+          ============================================================
+          TO SWAP A FEATURED PROJECT:
+          There are exactly 4 slots below (to match the layout).
+          Change the image src and the small caption text — that's it.
+          To see ALL of your work instead of just these 4, that lives
+          on the "Artwork" page (edit ARTWORK_IMAGES in script.js).
+          ============================================================
+        -->
+        <div class="projects-col">
+          <h2 class="mini-title">Projects</h2>
+          <div class="mini-grid" id="featuredProjects">
 
-      <article class="project-card">
-        <div class="project-thumb">
-          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-            <rect width="300" height="300" fill="#111"/>
-            <rect x="60" y="60" width="180" height="180" fill="#FFD400" transform="rotate(45 150 150)"/>
-          </svg>
-        </div>
-        <div class="project-info">
-          <h3>Editorial Spots</h3>
-          <p>Magazine commissions</p>
-        </div>
-      </article>
+            <div class="mini-item">
+              <img src="assets/project-totebag-1.jpg" alt="Totebag design">
+              <span>Totebag</span>
+            </div>
 
-      <article class="project-card">
-        <div class="project-thumb">
-          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-            <rect width="300" height="300" fill="#111"/>
-            <path d="M0 220 Q150 100 300 220 L300 300 L0 300Z" fill="#FFD400"/>
-            <circle cx="220" cy="90" r="30" fill="#FFD400"/>
-          </svg>
-        </div>
-        <div class="project-info">
-          <h3>Character Set</h3>
-          <p>Personal project</p>
-        </div>
-      </article>
+            <div class="mini-item">
+              <img src="assets/project-photography-1.jpg" alt="Lipstick product photography">
+              <span>Photography</span>
+            </div>
 
-      <article class="project-card">
-        <div class="project-thumb">
-          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-            <rect width="300" height="300" fill="#FFD400"/>
-            <path d="M0 0 L150 150 L0 300Z" fill="#111"/>
-            <path d="M300 0 L150 150 L300 300Z" fill="#111"/>
-          </svg>
+            <div class="mini-item">
+              <img src="assets/project-handdrawn-2.jpg" alt="Piano illustration collage">
+              <span>Illustration</span>
+            </div>
+
+            <div class="mini-item">
+              <img src="assets/project-poster.jpg" alt="Anti-bullying awareness poster">
+              <span>Poster</span>
+            </div>
+
+          </div>
         </div>
-        <div class="project-info">
-          <h3>Poster Art</h3>
-          <p>Event branding</p>
+
+        <div class="about-col">
+          <h2 class="mini-title">About me</h2>
+          <p class="about-text">Creative and detail-oriented illustrator with a passion for visual storytelling and digital art. Skilled in creating character designs, illustrations, branding visuals, and promotional artwork.</p>
+          <p class="about-text">Committed to delivering high-quality designs that communicate ideas effectively while meeting client requirements.</p>
         </div>
-      </article>
 
-    </div>
-  </section>
-
-  <!-- SKILLS / ABOUT -->
-  <section class="skills" id="skills">
-    <div class="skills-about">
-      <p class="eyebrow">About Me</p>
-      <h2>Hi, I'm the artist behind Studio Line.</h2>
-      <p>I'm an illustrator focused on bold shapes, honest linework, and color that does the talking. Over the past six years I've worked with editorial clients, indie studios, and small brands who want art that feels handmade, not templated.</p>
-      <p>When I'm not on a client deadline, I'm filling sketchbooks with the wildlife and characters you'll find in my personal projects below.</p>
-    </div>
-    <div class="skills-list">
-      <p class="eyebrow">Skills</p>
-      <ul>
-        <li><span>Character Illustration</span><div class="bar"><i style="width:95%"></i></div></li>
-        <li><span>Editorial &amp; Spot Art</span><div class="bar"><i style="width:90%"></i></div></li>
-        <li><span>Digital Color &amp; Rendering</span><div class="bar"><i style="width:88%"></i></div></li>
-        <li><span>Procreate / Photoshop</span><div class="bar"><i style="width:92%"></i></div></li>
-        <li><span>Brand &amp; Poster Design</span><div class="bar"><i style="width:80%"></i></div></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="section-head">
-      <p class="eyebrow">Let's Talk</p>
-      <h2>Contact</h2>
-    </div>
-    <div class="contact-wrap">
-      <form class="contact-form" id="contactForm">
-        <label>
-          Name
-          <input type="text" name="name" placeholder="Your name" required>
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" placeholder="you@email.com" required>
-        </label>
-        <label>
-          Message
-          <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
-        </label>
-        <button type="submit" class="btn-view">Send Message</button>
-        <p class="form-note" id="formNote"></p>
-      </form>
-      <div class="contact-info">
-        <p><strong>Email</strong><br>hello@studioline.com</p>
-        <p><strong>Based in</strong><br>Working with clients worldwide</p>
-        <p><strong>Follow</strong><br>Instagram · Behance · Dribbble</p>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Studio Line. All artwork rights reserved.</p>
-  </footer>
+  <!-- ============================================================ -->
+  <!-- PAGE 3 — ARTWORK (all pictures, plain gallery + lightbox)    -->
+  <!-- ============================================================ -->
+  <section class="page" id="page-artwork" data-page="artwork">
+    <div class="page-inner">
+      <div class="section-head">
+        <p class="eyebrow">All Work</p>
+        <h2>Artwork</h2>
+        <p class="section-sub">Every piece in one place. Click any image to view it larger.</p>
+      </div>
+      <!--
+        ============================================================
+        TO ADD OR REMOVE ARTWORK:
+        Do NOT edit the HTML here — this grid is built automatically
+        by script.js from a single list called ARTWORK_IMAGES.
+        Open script.js, find "ARTWORK_IMAGES" near the top, and:
+          - add a picture:    { src: "assets/your-file.jpg", caption: "Title" },
+          - remove a picture: delete its line
+        The gallery and lightbox update automatically.
+        ============================================================
+      -->
+      <div class="artwork-grid" id="artworkGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PAGE 4 — SKILL                                                -->
+  <!-- ============================================================ -->
+  <section class="page" id="page-skill" data-page="skill">
+    <div class="page-inner">
+      <div class="section-head">
+        <p class="eyebrow">What I Work With</p>
+        <h2>Skill</h2>
+      </div>
+
+      <div class="skill-columns">
+        <div class="skill-block">
+          <h3>Software Skills</h3>
+          <!--
+            ============================================================
+            TO ADD, REMOVE OR SWAP A SKILL PICTURE:
+            Do NOT edit the HTML here — this grid is built automatically
+            by script.js from a list called SKILL_IMAGES.
+            Open script.js, find "SKILL_IMAGES" near the top, and:
+              - add a skill:    { src: "assets/your-icon.png", label: "Name" },
+              - remove a skill: delete its line
+            ============================================================
+          -->
+          <div class="skill-icon-grid" id="skillIconGrid"></div>
+        </div>
+
+        <div class="skill-block">
+          <h3>Communication Skills</h3>
+          <ul class="skill-list">
+            <li>Proficient in delivering clear and persuasive messages</li>
+            <li>Skilled in active listening</li>
+            <li>Experience in presenting ideas</li>
+            <li>Adaptable in using different communication styles</li>
+            <li>Strong interpersonal abilities</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PAGE 5 — CONTACT                                              -->
+  <!-- ============================================================ -->
+  <section class="page" id="page-contact" data-page="contact">
+    <div class="page-inner">
+      <div class="section-head">
+        <p class="eyebrow">Contact Me!</p>
+        <h2>Contact</h2>
+        <p class="section-sub">Welcome to my creative space. This portfolio is a collection of my best work in graphic design, photography, illustration, branding and digital media — I hope it gives you a glimpse of my creative journey.</p>
+      </div>
+      <div class="contact-info contact-info-solo">
+        <p><strong>Email</strong><br><a href="mailto:farhanah359@gmail.com">farhanah359@gmail.com</a></p>
+        <p><strong>Phone</strong><br><a href="tel:+60139620546">+6013-9620546</a></p>
+        <p><strong>Instagram</strong><br>@syuuuu_</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Lightbox for the Artwork gallery -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+  <p id="lightboxCaption"></p>
+</div>
 
 <script src="script.js"></script>
 </body>
