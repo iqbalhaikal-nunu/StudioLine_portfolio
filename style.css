@@ -10,7 +10,7 @@
   --font-script: 'Yellowtail', cursive;
   --font-body: 'Inter', sans-serif;
   --pad: clamp(22px, 5vw, 64px);
-  --nav-h: 78px;
+  --nav-h: 100px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -82,11 +82,15 @@ img { max-width: 100%; display: block; }
   height: 100%;
 }
 .logo-img {
-  height: 42px;
+  height: 80px;
   width: auto;
-  max-width: 220px;
+  max-width: 260px;
   object-fit: contain;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
+.logo:hover .logo-img { transform: scale(1.04); }
 
 .nav-links { display: flex; gap: 10px; z-index: 2; }
 .nav-item {
@@ -225,13 +229,10 @@ img { max-width: 100%; display: block; }
   border: 3px solid var(--black);
 }
 
-/* ---------- Project page (4 featured + About me, wireframe layout) ---------- */
-.project-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-  min-height: calc(100vh - var(--nav-h) - 96px);
+/* ---------- Project section (embedded on Home, below the hero) ---------- */
+.project-embed {
+  min-height: auto;
+  padding-top: 20px;
 }
 .mini-title {
   font-family: var(--font-display);
@@ -242,7 +243,7 @@ img { max-width: 100%; display: block; }
 }
 .mini-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 .mini-item {
@@ -251,7 +252,7 @@ img { max-width: 100%; display: block; }
   border: 2px solid var(--black);
   overflow: hidden;
   background: #f4f4f2;
-  cursor: default;
+  cursor: pointer;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 .mini-item:hover { transform: translate(-4px,-4px); box-shadow: 6px 6px 0 var(--yellow); }
@@ -267,7 +268,36 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.05em;
   padding: 8px 10px;
 }
-.about-col { padding-top: 6px; }
+
+/* ---------- View page (opened via "View" button): photo left, about right ---------- */
+.view-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 56px;
+  min-height: calc(100vh - var(--nav-h) - 96px);
+}
+.view-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+}
+.view-image-frame::before {
+  content: "";
+  position: absolute;
+  top: 18px; left: -18px;
+  width: 100%; height: 100%;
+  background: var(--yellow);
+  z-index: 0;
+}
+.view-image-frame img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border: 3px solid var(--black);
+}
 .about-text {
   font-size: 15.5px;
   color: var(--black);
@@ -431,7 +461,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 20px; }
   .hero-image { order: -1; }
   .hero-image-frame { max-width: 280px; margin: 0 auto 30px; }
-  .project-layout { grid-template-columns: 1fr; gap: 40px; min-height: auto; }
+  .view-layout { grid-template-columns: 1fr; gap: 30px; min-height: auto; }
+  .view-image-frame { max-width: 280px; margin: 0 auto 10px; }
+  .mini-grid { grid-template-columns: repeat(2, 1fr); }
   .artwork-grid { grid-template-columns: repeat(3, 1fr); }
   .skill-columns { grid-template-columns: 1fr; gap: 10px; }
   .skill-icon-grid { grid-template-columns: repeat(4, 1fr); }
@@ -463,6 +495,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   }
   .nav-item.active, .nav-item:hover { background: var(--yellow); color: var(--black); }
   .nav-toggle { display: flex; }
+  .logo-img { height: 56px; }
   .mini-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .skill-icon-grid { grid-template-columns: repeat(3, 1fr); }
   .artwork-grid { grid-template-columns: repeat(2, 1fr); }

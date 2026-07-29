@@ -47,7 +47,7 @@ const SKILL_IMAGES = [
 /* ================================================================
    PAGE ROUTER — hash based, so links & the browser back button work
    ================================================================ */
-const PAGES = ["home", "project", "artwork", "skill", "contact"];
+const PAGES = ["home", "view", "artwork", "skill", "contact"];
 
 function showPage(name) {
   if (!PAGES.includes(name)) name = "home";
@@ -77,11 +77,11 @@ window.addEventListener("hashchange", () => showPage(currentPageFromHash()));
 function buildArtworkGrid() {
   const grid = document.getElementById("artworkGrid");
   grid.innerHTML = "";
-  ARTWORK_IMAGES.forEach((item, i) => {
+  ARTWORK_IMAGES.forEach((item) => {
     const fig = document.createElement("div");
     fig.className = "artwork-item";
     fig.innerHTML = `<img src="${item.src}" alt="${item.caption}" loading="lazy"><span>${item.caption}</span>`;
-    fig.addEventListener("click", () => openLightbox(i));
+    fig.addEventListener("click", () => openLightbox(item.src, item.caption));
     grid.appendChild(fig);
   });
 }
@@ -98,15 +98,27 @@ function buildSkillGrid() {
   });
 }
 
-function openLightbox(index) {
-  const item = ARTWORK_IMAGES[index];
-  document.getElementById("lightboxImg").src = item.src;
-  document.getElementById("lightboxImg").alt = item.caption;
-  document.getElementById("lightboxCaption").textContent = item.caption;
+function openLightbox(src, caption) {
+  document.getElementById("lightboxImg").src = src;
+  document.getElementById("lightboxImg").alt = caption;
+  document.getElementById("lightboxCaption").textContent = caption;
   document.getElementById("lightbox").classList.add("open");
 }
 function closeLightbox() {
   document.getElementById("lightbox").classList.remove("open");
+}
+
+/* ================================================================
+   Make the featured images in the Project section (on Home) pop up
+   in the same lightbox used on the Artwork page — just click one.
+   ================================================================ */
+function wireFeaturedProjects() {
+  document.querySelectorAll("#featuredProjects .mini-item").forEach(item => {
+    const img = item.querySelector("img");
+    const captionEl = item.querySelector("span");
+    const caption = captionEl ? captionEl.textContent : img.alt;
+    item.addEventListener("click", () => openLightbox(img.getAttribute("src"), caption));
+  });
 }
 
 document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
@@ -125,8 +137,21 @@ const navLinks = document.getElementById("navLinks");
 navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
 
 /* ================================================================
+   "Project" button on Home smooth-scrolls down to the project
+   section instead of navigating to a different page.
+   ================================================================ */
+const btnScrollProject = document.getElementById("btnScrollProject");
+if (btnScrollProject) {
+  btnScrollProject.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("project-section").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+/* ================================================================
    Init
    ================================================================ */
 buildArtworkGrid();
 buildSkillGrid();
+wireFeaturedProjects();
 showPage(currentPageFromHash());
