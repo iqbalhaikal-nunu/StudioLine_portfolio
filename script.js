@@ -6,26 +6,63 @@
    ================================================================ */
 const ARTWORK_IMAGES = [
   { src: "assets/project-digital-illustration.jpg", caption: "Digital Illustration" },
-  { src: "assets/project-handdrawn-1.jpg",          caption: "Hand-Drawn Illustration" },
+  { src: "assets/project-handdrawn-1.jpg",          caption: "Digital Illustration" },
+  { src: "assets/project-digital-illustration-3.jpg",          caption: "Digital Illustration" },
+
+
   { src: "assets/project-handdrawn-2.jpg",          caption: "Hand-Drawn Illustration" },
+  { src: "assets/project-handdrawing.jpg",          caption: "Hand-Drawn Illustration" },
+  
   { src: "assets/project-packaging-1.jpg",          caption: "Packaging" },
   { src: "assets/project-packaging-2.jpg",          caption: "Packaging" },
-  { src: "assets/project-totebag-1.jpg",            caption: "Totebag" },
+  { src: "assets/project-totebag-1.jpg",            caption: "Packaging" },
+  { src: "assets/project-packagin-3.jpg",            caption: "Packaging" },
+
+
   { src: "assets/project-totebag-2.jpg",            caption: "Totebag" },
   { src: "assets/project-photography-1.jpg",        caption: "Photography" },
   { src: "assets/project-photography-2.jpg",        caption: "Photography" },
-  { src: "assets/project-typography.jpg",           caption: "Typography" },
-  { src: "assets/project-button-badge.jpg",         caption: "Button Badge" },
-  { src: "assets/project-newspaper.jpg",            caption: "Newspaper" },
-  { src: "assets/project-poster-education.jpg",     caption: "Poster Education" },
+{ src: "assets/project-photography-3.jpg",        caption: "Photography" },
+{ src: "assets/project-photography-4.jpg",        caption: "Photography" },
+{ src: "assets/project-photography-5.jpg",        caption: "Photography" },
+{ src: "assets/project-photography-6.jpg",        caption: "Photography" },
+{ src: "assets/project-photography-7.jpg",        caption: "Photography" },
+{ src: "assets/project-photography-8.jpg",        caption: "Photography" },
+{ src: "assets/project-illustration-1.jpg",        caption: "Illustration" },
+{ src: "assets/project-illustration-2.jpg",        caption: "Illustration" },
+
+
+  { src: "assets/project-typography.jpg",           caption: "Illustration" },
+  { src: "assets/project-button-badge.jpg",         caption: "Illustration" },
+  { src: "assets/project-newspaper.jpg",            caption: "Button-badge" },
+  { src: "assets/project-newspaper-2.jpg",            caption: "Newspaper" },
+
+
+  { src: "assets/project-poster-education.jpg",     caption: "Newspaper" },
   { src: "assets/project-labelling-1.jpg",          caption: "Labelling" },
   { src: "assets/project-labelling-2.jpg",          caption: "Labelling" },
+  { src: "assets/project-labelling-3.jpg",          caption: "Labelling" },
+  { src: "assets/project-labelling-4.jpg",          caption: "Labelling" },
+
+
   { src: "assets/project-brochure.jpg",             caption: "Brochure" },
-  { src: "assets/project-3d-poster.jpg",            caption: "3D Poster" },
+  { src: "assets/project-3d-poster.jpg",            caption: "Brochure" },
   { src: "assets/project-magazine.jpg",             caption: "Magazine" },
   { src: "assets/project-poster.jpg",                caption: "Poster" },
-  { src: "assets/project-flashcard.jpg",            caption: "Flash Card" },
+  { src: "assets/project-flashcard.jpg",            caption: "Poster" },
+  { src: "assets/project-poster-4.jpg",            caption: "Poster" },
+
+    { src: "assets/project-poster-education2.jpg",            caption: "Poster Education" },
+  { src: "assets/project-poster-education3.jpg",            caption: "Poster Education" },
+
+
+    { src: "assets/project-quotes.jpg",            caption: "Quotes" },
+
+  { src: "assets/project-flashcard-2.jpg",            caption: "Flashcard" },
+
 ];
+
+
 
 /* ================================================================
    SKILL PICTURES (Skill page)
