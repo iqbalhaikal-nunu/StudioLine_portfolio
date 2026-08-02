@@ -8,7 +8,7 @@ const ARTWORK_IMAGES = [
   { src: "assets/project-digital-illustration.jpg", caption: "Digital Illustration" },
   { src: "assets/project-handdrawn-1.jpg",          caption: "Digital Illustration" },
   { src: "assets/project-digital-illustration-3.jpg",          caption: "Digital Illustration" },
-  { src: "assets/project-digital-illustration-2.jpg",          caption: "Digital Illustration" },
+  { src: "assets/project-digital-illustration-2.jpg",          caption: "3D Poster" },
 
 
   { src: "assets/project-handdrawn-2.jpg",          caption: "Hand-Drawn Illustration" },
