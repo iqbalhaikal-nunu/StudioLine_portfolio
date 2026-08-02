@@ -34,7 +34,7 @@ const ARTWORK_IMAGES = [
 
 
   { src: "assets/project-typography.jpg",           caption: "Illustration" },
-  { src: "assets/project-button-badge.jpg",         caption: "Illustration" },
+
   { src: "assets/project-newspaper.jpg",            caption: "Button-badge" },
   { src: "assets/project-newspaper-2.jpg",            caption: "Newspaper" },
 
