@@ -53,9 +53,9 @@ const ARTWORK_IMAGES = [
   { src: "assets/project-flashcard.jpg",            caption: "Poster" },
   { src: "assets/project-poster-4.jpg",            caption: "Poster" },
 
-    { src: "assets/project-poster-education2.jpg",            caption: "Poster Education" },
+  { src: "assets/project-poster-education2.jpg",            caption: "Poster Education" },
   { src: "assets/project-poster-education3.jpg",            caption: "Poster Education" },
-
+  { src: "assets/project-digital-illustration-2.jpg",          caption: "3D Poster" },  
 
     { src: "assets/project-quotes.jpg",            caption: "Quotes" },
 
