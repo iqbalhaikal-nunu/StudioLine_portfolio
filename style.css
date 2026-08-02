@@ -269,6 +269,33 @@ img { max-width: 100%; display: block; }
   padding: 8px 10px;
 }
 
+/* ---------- Portfolio Video section ---------- */
+.video-embed {
+  min-height: auto;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+.video-frame {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 3px solid var(--black);
+  background: var(--black);
+  box-shadow: 8px 8px 0 var(--yellow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.video-frame:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 var(--yellow);
+}
+.video-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--black);
+}
+
 /* ---------- View page (opened via "View" button): photo left, about right ---------- */
 .view-layout {
   display: grid;
